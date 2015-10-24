@@ -6,7 +6,7 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <projectUrl>https://github.com/JeremyAnsel/JeremyAnsel.Xwa.Imc</projectUrl>
+    <projectUrl>https://github.com/JeremyAnsel/JeremyAnsel.Xwa.Cbm</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A .Net library to handle X-Wing Alliance's CBM files.</description>
     <copyright>Copyright © 2014 Jérémy Ansel</copyright>
