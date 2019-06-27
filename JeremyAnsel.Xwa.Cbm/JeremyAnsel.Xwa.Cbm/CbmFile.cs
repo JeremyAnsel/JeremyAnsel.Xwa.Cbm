@@ -195,7 +195,7 @@ namespace JeremyAnsel.Xwa.Cbm
                         }
                     }
 
-                    this.FileName = FileName;
+                    this.FileName = fileName;
                 }
             }
             finally
