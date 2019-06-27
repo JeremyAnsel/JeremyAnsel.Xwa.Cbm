@@ -65,6 +65,14 @@ namespace JeremyAnsel.Xwa.Cbm
 
         public IList<CbmImage> Images { get; private set; }
 
+        public bool IsCompressed
+        {
+            get
+            {
+                return this.Images.Count == 0 ? false : this.Images.Any(t => t.IsCompressed);
+            }
+        }
+
         public static CbmFile FromFile(string fileName)
         {
             var cbm = new CbmFile();
@@ -205,6 +213,13 @@ namespace JeremyAnsel.Xwa.Cbm
                     filestream.Dispose();
                 }
             }
+        }
+
+        public void Decompress()
+        {
+            this.Images
+                .AsParallel()
+                .ForAll(t => t.Decompress());
         }
 
         public void Compress()

@@ -204,6 +204,16 @@ namespace JeremyAnsel.Xwa.Cbm
             return data;
         }
 
+        public void Decompress()
+        {
+            if (!this.IsCompressed)
+            {
+                return;
+            }
+
+            this.InitData(this.Width, this.Height, this.DecompressData());
+        }
+
         public void Compress()
         {
             this.Compress(null);
@@ -637,7 +647,7 @@ namespace JeremyAnsel.Xwa.Cbm
             this.SetPalette(palette);
             this.SetRawData(w, h, colors);
 
-            this.Compress(data);
+            //this.Compress(data);
         }
 
         public void MakeColorTransparent(byte red, byte green, byte blue)
