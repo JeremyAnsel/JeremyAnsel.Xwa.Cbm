@@ -2,6 +2,7 @@
 namespace JeremyAnsel.Xwa.Cbm
 {
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Linq;
     using System.Text;
@@ -9,11 +10,6 @@ namespace JeremyAnsel.Xwa.Cbm
     public class CbmFile
     {
         private int currentImageIndex;
-
-        public CbmFile()
-        {
-            this.Images = new List<CbmImage>();
-        }
 
         public string FileName { get; private set; }
 
@@ -63,7 +59,7 @@ namespace JeremyAnsel.Xwa.Cbm
 
         public int GroupId { get; set; }
 
-        public IList<CbmImage> Images { get; private set; }
+        public IList<CbmImage> Images { get; } = new List<CbmImage>();
 
         public bool IsCompressed
         {
@@ -73,11 +69,13 @@ namespace JeremyAnsel.Xwa.Cbm
             }
         }
 
+        [SuppressMessage("Style", "IDE0017:Simplifier l'initialisation des objets", Justification = "Reviewed.")]
         public static CbmFile FromFile(string fileName)
         {
-            var cbm = new CbmFile();
-
-            cbm.FileName = fileName;
+            var cbm = new CbmFile
+            {
+                FileName = fileName
+            };
 
             FileStream filestream = null;
 

@@ -12,10 +12,6 @@ namespace JeremyAnsel.Xwa.Cbm
 
     public class CbmImage
     {
-        public CbmImage()
-        {
-        }
-
         public int Width { get; internal set; }
 
         public int Height { get; internal set; }
@@ -237,7 +233,7 @@ namespace JeremyAnsel.Xwa.Cbm
                 return;
             }
 
-            Action<List<Tuple<byte, ArraySegment<byte>>>, byte[], byte, int, int, int> addSegment = (values, array, t, c, n, max) =>
+            void addSegment(List<Tuple<byte, ArraySegment<byte>>> values, byte[] array, byte t, int c, int n, int max)
             {
                 while (n > 0)
                 {
@@ -258,15 +254,15 @@ namespace JeremyAnsel.Xwa.Cbm
                         n -= max;
                     }
                 }
-            };
+            }
 
-            Func<ArraySegment<byte>, List<Tuple<byte, ArraySegment<byte>>>> parseLine = t =>
+            List<Tuple<byte, ArraySegment<byte>>> parseLine(ArraySegment<byte> t)
             {
                 int tLength = t.Offset + t.Count;
 
                 var values = new List<Tuple<byte, ArraySegment<byte>>>();
 
-                for (int i = t.Offset; i < tLength; )
+                for (int i = t.Offset; i < tLength;)
                 {
                     int c;
                     int n;
@@ -335,14 +331,14 @@ namespace JeremyAnsel.Xwa.Cbm
                 }
 
                 return values;
-            };
+            }
 
             var lines = Enumerable.Range(0, this.Height)
                 .Select(t => new ArraySegment<byte>(this.rawData, t * this.Width, this.Width))
                 .Select(t => parseLine(t))
                 .ToArray();
 
-            Func<List<Tuple<byte, ArraySegment<byte>>>, List<byte>> writeLine = t =>
+            List<byte> writeLine(List<Tuple<byte, ArraySegment<byte>>> t)
             {
                 List<byte> data = new List<byte>();
 
@@ -373,7 +369,7 @@ namespace JeremyAnsel.Xwa.Cbm
                 data.InsertRange(0, BitConverter.GetBytes(data.Count));
 
                 return data;
-            };
+            }
 
             var linesData = lines
                 .SelectMany(t => writeLine(t))
@@ -387,12 +383,12 @@ namespace JeremyAnsel.Xwa.Cbm
         {
             if (palette == null)
             {
-                throw new ArgumentNullException("palette");
+                throw new ArgumentNullException(nameof(palette));
             }
 
             if (palette.Length != 256)
             {
-                throw new ArgumentOutOfRangeException("palette");
+                throw new ArgumentOutOfRangeException(nameof(palette));
             }
 
             this.palette32 = palette;
@@ -424,22 +420,22 @@ namespace JeremyAnsel.Xwa.Cbm
         {
             if (width < 0)
             {
-                throw new ArgumentOutOfRangeException("width");
+                throw new ArgumentOutOfRangeException(nameof(width));
             }
 
             if (height < 0)
             {
-                throw new ArgumentOutOfRangeException("height");
+                throw new ArgumentOutOfRangeException(nameof(height));
             }
 
             if (data == null)
             {
-                throw new ArgumentNullException("data");
+                throw new ArgumentNullException(nameof(data));
             }
 
             if (data.Length != width * height)
             {
-                throw new ArgumentOutOfRangeException("data");
+                throw new ArgumentOutOfRangeException(nameof(data));
             }
 
             this.Width = width;
@@ -470,7 +466,7 @@ namespace JeremyAnsel.Xwa.Cbm
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("fileName");
+                    throw new ArgumentOutOfRangeException(nameof(fileName));
             }
 
             var data = this.GetImageData();
@@ -542,7 +538,7 @@ namespace JeremyAnsel.Xwa.Cbm
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("fileName");
+                    throw new ArgumentOutOfRangeException(nameof(fileName));
             }
         }
 
@@ -550,22 +546,22 @@ namespace JeremyAnsel.Xwa.Cbm
         {
             if (width < 0)
             {
-                throw new ArgumentOutOfRangeException("width");
+                throw new ArgumentOutOfRangeException(nameof(width));
             }
 
             if (height < 0)
             {
-                throw new ArgumentOutOfRangeException("height");
+                throw new ArgumentOutOfRangeException(nameof(height));
             }
 
             if (data == null)
             {
-                throw new ArgumentNullException("data");
+                throw new ArgumentNullException(nameof(data));
             }
 
             if (data.Length != width * height * 4)
             {
-                throw new ArgumentOutOfRangeException("data");
+                throw new ArgumentOutOfRangeException(nameof(data));
             }
 
             this.InitData(width, height, data);
