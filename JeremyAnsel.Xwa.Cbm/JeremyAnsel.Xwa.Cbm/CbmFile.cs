@@ -65,7 +65,7 @@ namespace JeremyAnsel.Xwa.Cbm
         {
             get
             {
-                return this.Images.Count == 0 ? false : this.Images.Any(t => t.IsCompressed);
+                return this.Images.Count != 0 && this.Images.Any(t => t.IsCompressed);
             }
         }
 
