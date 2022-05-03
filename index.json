@@ -4,11 +4,6 @@
     "title": "JeremyAnsel.Xwa.Cbm",
     "keywords": "JeremyAnsel.Xwa.Cbm This is the documentation for JeremyAnsel.Xwa.Cbm."
   },
-  "index.html": {
-    "href": "index.html",
-    "title": "JeremyAnsel.Xwa.Cbm",
-    "keywords": "JeremyAnsel.Xwa.Cbm JeremyAnsel.Xwa.Cbm is a .Net library to handle X-Wing Alliance's CBM files."
-  },
   "api/JeremyAnsel.Xwa.Cbm.CbmFile.html": {
     "href": "api/JeremyAnsel.Xwa.Cbm.CbmFile.html",
     "title": "Class CbmFile",
@@ -23,5 +18,10 @@
     "href": "api/JeremyAnsel.Xwa.Cbm.html",
     "title": "Namespace JeremyAnsel.Xwa.Cbm",
     "keywords": "Namespace JeremyAnsel.Xwa.Cbm Classes CbmFile CbmImage"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "JeremyAnsel.Xwa.Cbm",
+    "keywords": "JeremyAnsel.Xwa.Cbm JeremyAnsel.Xwa.Cbm is a .Net library to handle X-Wing Alliance's CBM files."
   }
 }
