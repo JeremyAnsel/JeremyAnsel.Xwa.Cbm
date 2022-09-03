@@ -13,48 +13,12 @@
       "is_incremental": false
     },
     {
-      "type": "ManagedReference",
-      "source_relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmFile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmFile.html",
-          "hash": "S/jSzoYs9EtuyWB353du+Tj9zAYrLydUYNFrPstjzeI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmImage.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmImage.html",
-          "hash": "wC9uhiDEnGp6T+xM4Mw71jEQBYRUHUsk3XVq8lLE+/s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/JeremyAnsel.Xwa.Cbm.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/JeremyAnsel.Xwa.Cbm.html",
-          "hash": "ShWOTcXy9RqhtWbdZh4RDJ+Y/tfyNbL5qjAwuJOfzQw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "YIKs8Y8nGixTlYOhq/QQ9B0QV3wTFuDGByN68bB0pz4="
+          "hash": "7aO1FzufuUG4pmCdhD8Aryckf1EGJx5NY6UvL3un2/Q="
         }
       },
       "is_incremental": false,
@@ -88,12 +52,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
