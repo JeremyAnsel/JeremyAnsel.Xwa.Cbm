@@ -48,6 +48,22 @@ namespace JeremyAnsel.Xwa.Cbm
             }
         }
 
+        public ushort BackgroundColor16
+        {
+            get
+            {
+                return this.palette16?[0] ?? 0;
+            }
+        }
+
+        public uint BackgroundColor32
+        {
+            get
+            {
+                return (this.palette32?[0] ?? 0) & 0xffffff;
+            }
+        }
+
         internal ushort[] palette16;
 
         internal uint[] palette32;
@@ -89,6 +105,11 @@ namespace JeremyAnsel.Xwa.Cbm
 
         public byte[] GetImageData()
         {
+            return this.GetImageData(false);
+        }
+
+        public byte[] GetImageData(bool addBackground)
+        {
             if (this.rawData == null)
             {
                 return null;
@@ -99,22 +120,50 @@ namespace JeremyAnsel.Xwa.Cbm
                 return null;
             }
 
+            int length = this.Width * this.Height;
+            byte[] data;
+
             if (this.IsCompressed)
             {
-                return this.DecompressData();
+                data = this.DecompressData();
+            }
+            else
+            {
+                data = new byte[length * 4];
+
+                for (int i = 0; i < length; i++)
+                {
+                    byte pal = this.rawData[i];
+
+                    if (pal == 0)
+                    {
+                        data[i * 4 + 0] = 0;
+                        data[i * 4 + 1] = 0;
+                        data[i * 4 + 2] = 0;
+                        data[i * 4 + 3] = 0;
+                    }
+                    else
+                    {
+                        data[i * 4 + 0] = (byte)((this.palette32[pal] >> 16) & 0xff);
+                        data[i * 4 + 1] = (byte)((this.palette32[pal] >> 8) & 0xff);
+                        data[i * 4 + 2] = (byte)(this.palette32[pal] & 0xff);
+                        data[i * 4 + 3] = 0xff;
+                    }
+                }
             }
 
-            int length = this.Width * this.Height;
-            byte[] data = new byte[length * 4];
-
-            for (int i = 0; i < length; i++)
+            if (addBackground)
             {
-                byte pal = this.rawData[i];
-
-                data[i * 4 + 0] = (byte)((this.palette32[pal] >> 16) & 0xff);
-                data[i * 4 + 1] = (byte)((this.palette32[pal] >> 8) & 0xff);
-                data[i * 4 + 2] = (byte)(this.palette32[pal] & 0xff);
-                data[i * 4 + 3] = 0xff;
+                for (int i = 0; i < length; i++)
+                {
+                    if (data[i * 4 + 3] == 0)
+                    {
+                        data[i * 4 + 0] = (byte)((this.palette32[0] >> 16) & 0xff);
+                        data[i * 4 + 1] = (byte)((this.palette32[0] >> 8) & 0xff);
+                        data[i * 4 + 2] = (byte)(this.palette32[0] & 0xff);
+                        data[i * 4 + 3] = 0xff;
+                    }
+                }
             }
 
             return data;
@@ -210,13 +259,8 @@ namespace JeremyAnsel.Xwa.Cbm
             this.InitData(this.Width, this.Height, this.DecompressData());
         }
 
-        public void Compress()
-        {
-            this.Compress(null);
-        }
-
         [SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Reviewed")]
-        private void Compress(byte[] data32)
+        public void Compress()
         {
             if (this.IsCompressed)
             {
@@ -274,7 +318,7 @@ namespace JeremyAnsel.Xwa.Cbm
 
                     for (; i < tLength; i++)
                     {
-                        if ((n > 0 && t.Array[i] == v) || (data32 != null && data32[i * 4 + 3] == 0))
+                        if ((n > 0 && t.Array[i] == v) || i == 0)
                         {
                             break;
                         }
@@ -292,23 +336,20 @@ namespace JeremyAnsel.Xwa.Cbm
 
                     addSegment(values, t.Array, 0, c, n, 127);
 
-                    if (data32 != null)
+                    c = i;
+                    n = 0;
+
+                    for (; i < tLength; i++)
                     {
-                        c = i;
-                        n = 0;
-
-                        for (; i < tLength; i++)
+                        if (i != 0)
                         {
-                            if (data32[i * 4 + 3] != 0)
-                            {
-                                break;
-                            }
-
-                            n++;
+                            break;
                         }
 
-                        addSegment(values, t.Array, 1, c, n, 63);
+                        n++;
                     }
+
+                    addSegment(values, t.Array, 1, c, n, 63);
 
                     c = i;
                     n = 0;
@@ -316,7 +357,7 @@ namespace JeremyAnsel.Xwa.Cbm
 
                     for (; i < tLength; i++)
                     {
-                        if (t.Array[i] != v || (data32 != null && data32[i * 4 + 3] == 0))
+                        if (t.Array[i] != v || i == 0)
                         {
                             break;
                         }
@@ -451,6 +492,11 @@ namespace JeremyAnsel.Xwa.Cbm
 
         public void Save(string fileName)
         {
+            this.Save(fileName, false);
+        }
+
+        public void Save(string fileName, bool addBackground)
+        {
             string ext = Path.GetExtension(fileName).ToUpperInvariant();
 
             ImageFormat format;
@@ -469,7 +515,7 @@ namespace JeremyAnsel.Xwa.Cbm
                     throw new ArgumentOutOfRangeException(nameof(fileName));
             }
 
-            var data = this.GetImageData();
+            var data = this.GetImageData(addBackground);
 
             if (data == null)
             {
@@ -572,6 +618,8 @@ namespace JeremyAnsel.Xwa.Cbm
             int length = w * h;
 
             uint[] palette = new uint[256];
+            palette[0] = 0;
+
             byte[] colors;
 
             for (int i = 0; i < length; i++)
@@ -594,16 +642,16 @@ namespace JeremyAnsel.Xwa.Cbm
                 .Distinct()
                 .ToArray();
 
-            if (dataColors.Length <= 256)
+            if (dataColors.Length <= 255)
             {
                 for (int i = 0; i < dataColors.Length; i++)
                 {
-                    palette[i] = dataColors[i];
+                    palette[i + 1] = dataColors[i];
                 }
 
-                for (int i = dataColors.Length; i < 256; i++)
+                for (int i = dataColors.Length; i < 255; i++)
                 {
-                    palette[i] = 0;
+                    palette[i + 1] = 0;
                 }
 
                 colors = Enumerable.Range(0, length)
@@ -614,7 +662,7 @@ namespace JeremyAnsel.Xwa.Cbm
                         {
                             if (dataColors[i] == t)
                             {
-                                return (byte)i;
+                                return (byte)(i + 1);
                             }
                         }
 
@@ -624,26 +672,37 @@ namespace JeremyAnsel.Xwa.Cbm
             }
             else
             {
-                var image = new ColorQuant.WuColorQuantizer().Quantize(data);
+                var image = new ColorQuant.WuColorQuantizer().Quantize(data, 255);
                 int paletteColorsCount = image.Palette.Length / 4;
 
                 for (int i = 0; i < paletteColorsCount; i++)
                 {
-                    palette[i] = (uint)((image.Palette[i * 4 + 0] << 16) | (image.Palette[i * 4 + 1] << 8) | image.Palette[i * 4 + 2]);
+                    palette[i + 1] = (uint)((image.Palette[i * 4 + 0] << 16) | (image.Palette[i * 4 + 1] << 8) | image.Palette[i * 4 + 2]);
                 }
 
-                for (int i = paletteColorsCount; i < 256; i++)
+                for (int i = paletteColorsCount; i < 255; i++)
                 {
-                    palette[i] = 0;
+                    palette[i + 1] = 0;
                 }
 
                 colors = image.Bytes;
+
+                for (int i = 0; i < length; i++)
+                {
+                    colors[i]++;
+                }
+            }
+
+            for (int i = 0; i < length; i++)
+            {
+                if (data[i * 4 + 3] == 0)
+                {
+                    colors[i] = 0;
+                }
             }
 
             this.SetPalette(palette);
             this.SetRawData(w, h, colors);
-
-            //this.Compress(data);
         }
 
         public void MakeColorTransparent(byte red, byte green, byte blue)
