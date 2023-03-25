@@ -3,12 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.Xwa.Cbm", "JeremyAnsel.Xwa.Cbm\JeremyAnsel.Xwa.Cbm.csproj", "{4029E474-4741-4382-BC48-0970809E94DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.Xwa.Cbm", "JeremyAnsel.Xwa.Cbm\JeremyAnsel.Xwa.Cbm.csproj", "{4029E474-4741-4382-BC48-0970809E94DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{9E2B367B-10C9-450D-A71A-37DFF5B2FB24}"
-	ProjectSection(ProjectDependencies) = postProject
-		{4029E474-4741-4382-BC48-0970809E94DC} = {4029E474-4741-4382-BC48-0970809E94DC}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation", "Documentation\Documentation.csproj", "{9E2B367B-10C9-450D-A71A-37DFF5B2FB24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
