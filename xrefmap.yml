@@ -131,11 +131,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmFile.FileName
   nameWithType: CbmFile.FileName
 - uid: JeremyAnsel.Xwa.Cbm.CbmFile.FromFile(System.String)
-  name: FromFile(String)
+  name: FromFile(string)
   href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_FromFile_System_String_
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmFile.FromFile(System.String)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmFile.FromFile(System.String)
-  nameWithType: CbmFile.FromFile(String)
+  name.vb: FromFile(String)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmFile.FromFile(string)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmFile.FromFile(String)
+  nameWithType: CbmFile.FromFile(string)
+  nameWithType.vb: CbmFile.FromFile(String)
 - uid: JeremyAnsel.Xwa.Cbm.CbmFile.FromFile*
   name: FromFile
   href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_FromFile_
@@ -261,11 +264,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmFile.MovePrevious
   nameWithType: CbmFile.MovePrevious
 - uid: JeremyAnsel.Xwa.Cbm.CbmFile.Save(System.String)
-  name: Save(String)
+  name: Save(string)
   href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_Save_System_String_
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmFile.Save(System.String)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmFile.Save(System.String)
-  nameWithType: CbmFile.Save(String)
+  name.vb: Save(String)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmFile.Save(string)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmFile.Save(String)
+  nameWithType: CbmFile.Save(string)
+  nameWithType.vb: CbmFile.Save(String)
 - uid: JeremyAnsel.Xwa.Cbm.CbmFile.Save*
   name: Save
   href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_Save_
@@ -397,11 +403,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Decompress
   nameWithType: CbmImage.Decompress
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.FromFile(System.String)
-  name: FromFile(String)
+  name: FromFile(string)
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_FromFile_System_String_
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.FromFile(System.String)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.FromFile(System.String)
-  nameWithType: CbmImage.FromFile(String)
+  name.vb: FromFile(String)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.FromFile(string)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.FromFile(String)
+  nameWithType: CbmImage.FromFile(string)
+  nameWithType.vb: CbmImage.FromFile(String)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.FromFile*
   name: FromFile
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_FromFile_
@@ -410,14 +419,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.FromFile
   nameWithType: CbmImage.FromFile
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.FromMemory(System.Int32,System.Int32,System.Byte[])
-  name: FromMemory(Int32, Int32, Byte[])
+  name: FromMemory(int, int, byte[])
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_FromMemory_System_Int32_System_Int32_System_Byte___
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.FromMemory(System.Int32,System.Int32,System.Byte[])
-  name.vb: FromMemory(Int32, Int32, Byte())
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.FromMemory(System.Int32, System.Int32, System.Byte[])
-  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.FromMemory(System.Int32, System.Int32, System.Byte())
-  nameWithType: CbmImage.FromMemory(Int32, Int32, Byte[])
-  nameWithType.vb: CbmImage.FromMemory(Int32, Int32, Byte())
+  name.vb: FromMemory(Integer, Integer, Byte())
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.FromMemory(int, int, byte[])
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.FromMemory(Integer, Integer, Byte())
+  nameWithType: CbmImage.FromMemory(int, int, byte[])
+  nameWithType.vb: CbmImage.FromMemory(Integer, Integer, Byte())
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.FromMemory*
   name: FromMemory
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_FromMemory_
@@ -432,11 +441,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.GetImageData()
   nameWithType: CbmImage.GetImageData()
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.GetImageData(System.Boolean)
-  name: GetImageData(Boolean)
+  name: GetImageData(bool)
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_GetImageData_System_Boolean_
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.GetImageData(System.Boolean)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.GetImageData(System.Boolean)
-  nameWithType: CbmImage.GetImageData(Boolean)
+  name.vb: GetImageData(Boolean)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.GetImageData(bool)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.GetImageData(Boolean)
+  nameWithType: CbmImage.GetImageData(bool)
+  nameWithType.vb: CbmImage.GetImageData(Boolean)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.GetImageData*
   name: GetImageData
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_GetImageData_
@@ -509,18 +521,24 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.IsCompressed
   nameWithType: CbmImage.IsCompressed
-- uid: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte)
-  name: MakeColorTransparent(Byte, Byte, Byte)
-  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_MakeColorTransparent_System_Byte_System_Byte_System_Byte_
-  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte, System.Byte, System.Byte)
-  nameWithType: CbmImage.MakeColorTransparent(Byte, Byte, Byte)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
-  name: MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
+  name: MakeColorTransparent(byte, byte, byte, byte, byte, byte)
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_MakeColorTransparent_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte, System.Byte, System.Byte, System.Byte, System.Byte, System.Byte)
-  nameWithType: CbmImage.MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
+  name.vb: MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(byte, byte, byte, byte, byte, byte)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
+  nameWithType: CbmImage.MakeColorTransparent(byte, byte, byte, byte, byte, byte)
+  nameWithType.vb: CbmImage.MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte)
+  name: MakeColorTransparent(byte, byte, byte)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_MakeColorTransparent_System_Byte_System_Byte_System_Byte_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte)
+  name.vb: MakeColorTransparent(Byte, Byte, Byte)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(byte, byte, byte)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(Byte, Byte, Byte)
+  nameWithType: CbmImage.MakeColorTransparent(byte, byte, byte)
+  nameWithType.vb: CbmImage.MakeColorTransparent(Byte, Byte, Byte)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent*
   name: MakeColorTransparent
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_MakeColorTransparent_
@@ -555,11 +573,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.OffsetY
   nameWithType: CbmImage.OffsetY
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithFile(System.String)
-  name: ReplaceWithFile(String)
+  name: ReplaceWithFile(string)
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_ReplaceWithFile_System_String_
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithFile(System.String)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithFile(System.String)
-  nameWithType: CbmImage.ReplaceWithFile(String)
+  name.vb: ReplaceWithFile(String)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithFile(string)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithFile(String)
+  nameWithType: CbmImage.ReplaceWithFile(string)
+  nameWithType.vb: CbmImage.ReplaceWithFile(String)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithFile*
   name: ReplaceWithFile
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_ReplaceWithFile_
@@ -568,14 +589,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithFile
   nameWithType: CbmImage.ReplaceWithFile
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory(System.Int32,System.Int32,System.Byte[])
-  name: ReplaceWithMemory(Int32, Int32, Byte[])
+  name: ReplaceWithMemory(int, int, byte[])
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_ReplaceWithMemory_System_Int32_System_Int32_System_Byte___
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory(System.Int32,System.Int32,System.Byte[])
-  name.vb: ReplaceWithMemory(Int32, Int32, Byte())
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory(System.Int32, System.Int32, System.Byte[])
-  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory(System.Int32, System.Int32, System.Byte())
-  nameWithType: CbmImage.ReplaceWithMemory(Int32, Int32, Byte[])
-  nameWithType.vb: CbmImage.ReplaceWithMemory(Int32, Int32, Byte())
+  name.vb: ReplaceWithMemory(Integer, Integer, Byte())
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory(int, int, byte[])
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory(Integer, Integer, Byte())
+  nameWithType: CbmImage.ReplaceWithMemory(int, int, byte[])
+  nameWithType.vb: CbmImage.ReplaceWithMemory(Integer, Integer, Byte())
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory*
   name: ReplaceWithMemory
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_ReplaceWithMemory_
@@ -583,18 +604,24 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory
   nameWithType: CbmImage.ReplaceWithMemory
-- uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String)
-  name: Save(String)
-  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_String_
-  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String)
-  nameWithType: CbmImage.Save(String)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String,System.Boolean)
-  name: Save(String, Boolean)
+  name: Save(string, bool)
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_String_System_Boolean_
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String,System.Boolean)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String, System.Boolean)
-  nameWithType: CbmImage.Save(String, Boolean)
+  name.vb: Save(String, Boolean)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save(string, bool)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.Save(String, Boolean)
+  nameWithType: CbmImage.Save(string, bool)
+  nameWithType.vb: CbmImage.Save(String, Boolean)
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String)
+  name: Save(string)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_String_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String)
+  name.vb: Save(String)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save(string)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.Save(String)
+  nameWithType: CbmImage.Save(string)
+  nameWithType.vb: CbmImage.Save(String)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save*
   name: Save
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_
@@ -603,14 +630,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save
   nameWithType: CbmImage.Save
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.SetPalette(System.UInt32[])
-  name: SetPalette(UInt32[])
+  name: SetPalette(uint[])
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_SetPalette_System_UInt32___
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.SetPalette(System.UInt32[])
-  name.vb: SetPalette(UInt32())
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.SetPalette(System.UInt32[])
-  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.SetPalette(System.UInt32())
-  nameWithType: CbmImage.SetPalette(UInt32[])
-  nameWithType.vb: CbmImage.SetPalette(UInt32())
+  name.vb: SetPalette(UInteger())
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.SetPalette(uint[])
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.SetPalette(UInteger())
+  nameWithType: CbmImage.SetPalette(uint[])
+  nameWithType.vb: CbmImage.SetPalette(UInteger())
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.SetPalette*
   name: SetPalette
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_SetPalette_
@@ -619,14 +646,14 @@ references:
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.SetPalette
   nameWithType: CbmImage.SetPalette
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.SetRawData(System.Int32,System.Int32,System.Byte[])
-  name: SetRawData(Int32, Int32, Byte[])
+  name: SetRawData(int, int, byte[])
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_SetRawData_System_Int32_System_Int32_System_Byte___
   commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.SetRawData(System.Int32,System.Int32,System.Byte[])
-  name.vb: SetRawData(Int32, Int32, Byte())
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.SetRawData(System.Int32, System.Int32, System.Byte[])
-  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.SetRawData(System.Int32, System.Int32, System.Byte())
-  nameWithType: CbmImage.SetRawData(Int32, Int32, Byte[])
-  nameWithType.vb: CbmImage.SetRawData(Int32, Int32, Byte())
+  name.vb: SetRawData(Integer, Integer, Byte())
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.SetRawData(int, int, byte[])
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.SetRawData(Integer, Integer, Byte())
+  nameWithType: CbmImage.SetRawData(int, int, byte[])
+  nameWithType.vb: CbmImage.SetRawData(Integer, Integer, Byte())
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.SetRawData*
   name: SetRawData
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_SetRawData_
