@@ -146,6 +146,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.Cbm.CbmFile.FromFile
   nameWithType: CbmFile.FromFile
+- uid: JeremyAnsel.Xwa.Cbm.CbmFile.FromStream(System.IO.Stream)
+  name: FromStream(Stream)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_FromStream_System_IO_Stream_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmFile.FromStream(System.IO.Stream)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmFile.FromStream(System.IO.Stream)
+  nameWithType: CbmFile.FromStream(Stream)
+- uid: JeremyAnsel.Xwa.Cbm.CbmFile.FromStream*
+  name: FromStream
+  href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_FromStream_
+  commentId: Overload:JeremyAnsel.Xwa.Cbm.CbmFile.FromStream
+  isSpec: "True"
+  fullName: JeremyAnsel.Xwa.Cbm.CbmFile.FromStream
+  nameWithType: CbmFile.FromStream
 - uid: JeremyAnsel.Xwa.Cbm.CbmFile.GroupId
   name: GroupId
   href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_GroupId
@@ -263,6 +276,12 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.Cbm.CbmFile.MovePrevious
   nameWithType: CbmFile.MovePrevious
+- uid: JeremyAnsel.Xwa.Cbm.CbmFile.Save(System.IO.Stream)
+  name: Save(Stream)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_Save_System_IO_Stream_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmFile.Save(System.IO.Stream)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmFile.Save(System.IO.Stream)
+  nameWithType: CbmFile.Save(Stream)
 - uid: JeremyAnsel.Xwa.Cbm.CbmFile.Save(System.String)
   name: Save(string)
   href: api/JeremyAnsel.Xwa.Cbm.CbmFile.html#JeremyAnsel_Xwa_Cbm_CbmFile_Save_System_String_
