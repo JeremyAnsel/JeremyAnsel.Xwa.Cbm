@@ -64,9 +64,9 @@ namespace JeremyAnsel.Xwa.Cbm
             }
         }
 
-        internal ushort[] palette16;
+        internal readonly ushort[] palette16 = new ushort[256];
 
-        internal uint[] palette32;
+        internal readonly uint[] palette32 = new uint[256];
 
         internal byte[] rawData;
 
@@ -432,14 +432,12 @@ namespace JeremyAnsel.Xwa.Cbm
                 throw new ArgumentOutOfRangeException(nameof(palette));
             }
 
-            this.palette32 = palette;
+            palette.CopyTo(this.palette32, 0);
 
             for (int i = 0; i < 256; i++)
             {
                 this.palette32[i] &= 0xffffff;
             }
-
-            this.palette16 = new ushort[256];
 
             for (int i = 0; i < 256; i++)
             {

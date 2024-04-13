@@ -119,14 +119,10 @@ namespace JeremyAnsel.Xwa.Cbm
 
                 file.BaseStream.Position += 4;
 
-                image.palette16 = new ushort[256];
-
                 for (int c = 0; c < 256; c++)
                 {
                     image.palette16[c] = (ushort)file.ReadUInt32();
                 }
-
-                image.palette32 = new uint[256];
 
                 for (int c = 0; c < 256; c++)
                 {
