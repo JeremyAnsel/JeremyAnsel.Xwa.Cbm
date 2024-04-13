@@ -540,15 +540,6 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.IsCompressed
   nameWithType: CbmImage.IsCompressed
-- uid: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
-  name: MakeColorTransparent(byte, byte, byte, byte, byte, byte)
-  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_MakeColorTransparent_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_
-  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
-  name.vb: MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(byte, byte, byte, byte, byte, byte)
-  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
-  nameWithType: CbmImage.MakeColorTransparent(byte, byte, byte, byte, byte, byte)
-  nameWithType.vb: CbmImage.MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte)
   name: MakeColorTransparent(byte, byte, byte)
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_MakeColorTransparent_System_Byte_System_Byte_System_Byte_
@@ -558,6 +549,15 @@ references:
   fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(Byte, Byte, Byte)
   nameWithType: CbmImage.MakeColorTransparent(byte, byte, byte)
   nameWithType.vb: CbmImage.MakeColorTransparent(Byte, Byte, Byte)
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
+  name: MakeColorTransparent(byte, byte, byte, byte, byte, byte)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_MakeColorTransparent_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
+  name.vb: MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(byte, byte, byte, byte, byte, byte)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
+  nameWithType: CbmImage.MakeColorTransparent(byte, byte, byte, byte, byte, byte)
+  nameWithType.vb: CbmImage.MakeColorTransparent(Byte, Byte, Byte, Byte, Byte, Byte)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.MakeColorTransparent*
   name: MakeColorTransparent
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_MakeColorTransparent_
@@ -623,15 +623,6 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory
   nameWithType: CbmImage.ReplaceWithMemory
-- uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String,System.Boolean)
-  name: Save(string, bool)
-  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_String_System_Boolean_
-  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String,System.Boolean)
-  name.vb: Save(String, Boolean)
-  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save(string, bool)
-  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.Save(String, Boolean)
-  nameWithType: CbmImage.Save(string, bool)
-  nameWithType.vb: CbmImage.Save(String, Boolean)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String)
   name: Save(string)
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_String_
@@ -641,6 +632,15 @@ references:
   fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.Save(String)
   nameWithType: CbmImage.Save(string)
   nameWithType.vb: CbmImage.Save(String)
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String,System.Boolean)
+  name: Save(string, bool)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_String_System_Boolean_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String,System.Boolean)
+  name.vb: Save(String, Boolean)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save(string, bool)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.Save(String, Boolean)
+  nameWithType: CbmImage.Save(string, bool)
+  nameWithType.vb: CbmImage.Save(String, Boolean)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save*
   name: Save
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_

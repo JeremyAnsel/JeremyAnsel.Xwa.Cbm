@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "C:/projects/jeremyansel-xwa-cbm/JeremyAnsel.Xwa.Cbm/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -16,8 +15,7 @@
       "source_relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmFile.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmFile.html",
-          "hash": "mawFlMlGCtZfwNmyhlkhuBK3d07BTO/87lJIomIYjEk="
+          "relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmFile.html"
         }
       },
       "version": ""
@@ -27,8 +25,7 @@
       "source_relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmImage.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmImage.html",
-          "hash": "y4Hxn+s82l7t7sIKgfJDWNAJyXzf59IqnyrZwYMtOI0="
+          "relative_path": "api/JeremyAnsel.Xwa.Cbm.CbmImage.html"
         }
       },
       "version": ""
@@ -38,8 +35,7 @@
       "source_relative_path": "api/JeremyAnsel.Xwa.Cbm.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.Xwa.Cbm.html",
-          "hash": "Cpouz3qt7CMwGZK5bU1OyhXy7Qi6pO6PWT9ILLJr8Ss="
+          "relative_path": "api/JeremyAnsel.Xwa.Cbm.html"
         }
       },
       "version": ""
@@ -49,8 +45,17 @@
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
-          "relative_path": "api/index.html",
-          "hash": "OLKWvzTlkfPomHynPNrZiC+bDalZjte+Vm+5SPqlj+U="
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -60,14 +65,22 @@
       "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "index.html",
-          "hash": "Aon9uilMkxFa+v9O8DbkMcZmq978hMtbcenGA2ufXwI="
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"
