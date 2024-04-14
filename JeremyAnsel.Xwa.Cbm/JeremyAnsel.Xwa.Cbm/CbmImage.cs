@@ -482,10 +482,10 @@ namespace JeremyAnsel.Xwa.Cbm
             this.IsCompressed = false;
             this.rawData = data;
 
-            this.AreaLeft = 0;
-            this.AreaTop = 0;
-            this.AreaRight = width;
-            this.AreaBottom = height;
+            //this.AreaLeft = 0;
+            //this.AreaTop = 0;
+            this.AreaRight = this.AreaLeft + width;
+            this.AreaBottom = this.AreaTop + height;
         }
 
         public void Save(string fileName)
