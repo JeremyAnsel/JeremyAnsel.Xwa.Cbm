@@ -12,3 +12,9 @@ Documentation   | http://jeremyansel.github.io/JeremyAnsel.Xwa.Cbm
 Source code     | https://github.com/JeremyAnsel/JeremyAnsel.Xwa.Cbm
 Nuget           | https://www.nuget.org/packages/JeremyAnsel.Xwa.Cbm
 Build           | https://ci.appveyor.com/project/JeremyAnsel/jeremyansel-xwa-cbm/branch/master
+
+# Usage
+
+```csharp
+CbmFile file = CbmFile.FromFile(fileName);
+```
