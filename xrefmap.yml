@@ -453,6 +453,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.FromMemory
   nameWithType: CbmImage.FromMemory
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.FromStream(System.IO.Stream)
+  name: FromStream(Stream)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_FromStream_System_IO_Stream_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.FromStream(System.IO.Stream)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.FromStream(System.IO.Stream)
+  nameWithType: CbmImage.FromStream(Stream)
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.FromStream*
+  name: FromStream
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_FromStream_
+  commentId: Overload:JeremyAnsel.Xwa.Cbm.CbmImage.FromStream
+  isSpec: "True"
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.FromStream
+  nameWithType: CbmImage.FromStream
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.GetImageData
   name: GetImageData()
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_GetImageData
@@ -623,6 +636,34 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithMemory
   nameWithType: CbmImage.ReplaceWithMemory
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithStream(System.IO.Stream)
+  name: ReplaceWithStream(Stream)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_ReplaceWithStream_System_IO_Stream_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithStream(System.IO.Stream)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithStream(System.IO.Stream)
+  nameWithType: CbmImage.ReplaceWithStream(Stream)
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithStream*
+  name: ReplaceWithStream
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_ReplaceWithStream_
+  commentId: Overload:JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithStream
+  isSpec: "True"
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.ReplaceWithStream
+  nameWithType: CbmImage.ReplaceWithStream
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.IO.Stream,System.Drawing.Imaging.ImageFormat)
+  name: Save(Stream, ImageFormat)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_IO_Stream_System_Drawing_Imaging_ImageFormat_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.IO.Stream,System.Drawing.Imaging.ImageFormat)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.IO.Stream, System.Drawing.Imaging.ImageFormat)
+  nameWithType: CbmImage.Save(Stream, ImageFormat)
+- uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.IO.Stream,System.Drawing.Imaging.ImageFormat,System.Boolean)
+  name: Save(Stream, ImageFormat, bool)
+  href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_IO_Stream_System_Drawing_Imaging_ImageFormat_System_Boolean_
+  commentId: M:JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.IO.Stream,System.Drawing.Imaging.ImageFormat,System.Boolean)
+  name.vb: Save(Stream, ImageFormat, Boolean)
+  fullName: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.IO.Stream, System.Drawing.Imaging.ImageFormat, bool)
+  fullName.vb: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.IO.Stream, System.Drawing.Imaging.ImageFormat, Boolean)
+  nameWithType: CbmImage.Save(Stream, ImageFormat, bool)
+  nameWithType.vb: CbmImage.Save(Stream, ImageFormat, Boolean)
 - uid: JeremyAnsel.Xwa.Cbm.CbmImage.Save(System.String)
   name: Save(string)
   href: api/JeremyAnsel.Xwa.Cbm.CbmImage.html#JeremyAnsel_Xwa_Cbm_CbmImage_Save_System_String_
