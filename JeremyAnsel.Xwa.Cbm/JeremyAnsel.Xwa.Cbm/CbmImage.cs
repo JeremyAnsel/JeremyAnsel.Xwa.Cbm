@@ -79,6 +79,15 @@ namespace JeremyAnsel.Xwa.Cbm
             return image;
         }
 
+        public static CbmImage FromStream(Stream stream)
+        {
+            CbmImage image = new CbmImage();
+
+            image.ReplaceWithStream(stream);
+
+            return image;
+        }
+
         public static CbmImage FromMemory(int width, int height, byte[] data)
         {
             CbmImage image = new CbmImage();
@@ -535,6 +544,40 @@ namespace JeremyAnsel.Xwa.Cbm
             }
         }
 
+        public void Save(Stream stream, ImageFormat format)
+        {
+            this.Save(stream, format, false);
+        }
+
+        public void Save(Stream stream, ImageFormat format, bool addBackground)
+        {
+            if (stream == null)
+            {
+                throw new ArgumentNullException(nameof(stream));
+            }
+
+            var data = this.GetImageData(addBackground);
+
+            if (data == null)
+            {
+                return;
+            }
+
+            var handle = GCHandle.Alloc(data, GCHandleType.Pinned);
+
+            try
+            {
+                using (var bitmap = new Bitmap(this.Width, this.Height, this.Width * 4, PixelFormat.Format32bppArgb, handle.AddrOfPinnedObject()))
+                {
+                    bitmap.Save(stream, format);
+                }
+            }
+            finally
+            {
+                handle.Free();
+            }
+        }
+
         public void ReplaceWithFile(string fileName)
         {
             string ext = Path.GetExtension(fileName).ToUpperInvariant();
@@ -584,6 +627,44 @@ namespace JeremyAnsel.Xwa.Cbm
                 default:
                     throw new ArgumentOutOfRangeException(nameof(fileName));
             }
+        }
+
+        public void ReplaceWithStream(Stream stream)
+        {
+            if (stream == null)
+            {
+                throw new ArgumentNullException(nameof(stream));
+            }
+
+            int w;
+            int h;
+            byte[] bytes;
+
+            using (var file = new Bitmap(stream))
+            {
+                var rect = new Rectangle(0, 0, file.Width, file.Height);
+                int length = file.Width * file.Height;
+
+                w = file.Width;
+                h = file.Height;
+                bytes = new byte[length * 4];
+
+                using (var bitmap = file.Clone(rect, PixelFormat.Format32bppArgb))
+                {
+                    var data = bitmap.LockBits(rect, ImageLockMode.ReadOnly, bitmap.PixelFormat);
+
+                    try
+                    {
+                        Marshal.Copy(data.Scan0, bytes, 0, length * 4);
+                    }
+                    finally
+                    {
+                        bitmap.UnlockBits(data);
+                    }
+                }
+            }
+
+            this.InitData(w, h, bytes);
         }
 
         public void ReplaceWithMemory(int width, int height, byte[] data)
