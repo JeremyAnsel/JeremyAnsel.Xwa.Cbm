@@ -11,7 +11,7 @@ namespace JeremyAnsel.Xwa.Cbm
     {
         private int currentImageIndex;
 
-        public string FileName { get; private set; }
+        public string? FileName { get; private set; }
 
         public int CurrentImageIndex
         {
@@ -30,7 +30,7 @@ namespace JeremyAnsel.Xwa.Cbm
             }
         }
 
-        public CbmImage CurrentImage
+        public CbmImage? CurrentImage
         {
             get
             {
@@ -80,8 +80,13 @@ namespace JeremyAnsel.Xwa.Cbm
         }
 
         [SuppressMessage("Style", "IDE0017:Simplifier l'initialisation des objets", Justification = "Reviewed.")]
-        public static CbmFile FromStream(Stream stream)
+        public static CbmFile FromStream(Stream? stream)
         {
+            if (stream == null)
+            {
+                throw new ArgumentNullException(nameof(stream));
+            }
+
             var cbm = new CbmFile();
 
             using var file = new BinaryReader(stream, Encoding.ASCII, true);
@@ -145,8 +150,13 @@ namespace JeremyAnsel.Xwa.Cbm
             this.FileName = fileName;
         }
 
-        public void Save(Stream stream)
+        public void Save(Stream? stream)
         {
+            if (stream == null)
+            {
+                throw new ArgumentNullException(nameof(stream));
+            }
+
             using var file = new BinaryWriter(stream, Encoding.ASCII, true);
 
             file.Write(this.Images.Count);

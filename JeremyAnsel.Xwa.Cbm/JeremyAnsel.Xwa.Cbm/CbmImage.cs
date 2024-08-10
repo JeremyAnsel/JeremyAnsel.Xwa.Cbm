@@ -68,7 +68,7 @@ namespace JeremyAnsel.Xwa.Cbm
 
         internal readonly uint[] palette32 = new uint[256];
 
-        internal byte[] rawData;
+        internal byte[]? rawData;
 
         public static CbmImage FromFile(string fileName)
         {
@@ -79,7 +79,7 @@ namespace JeremyAnsel.Xwa.Cbm
             return image;
         }
 
-        public static CbmImage FromStream(Stream stream)
+        public static CbmImage FromStream(Stream? stream)
         {
             CbmImage image = new CbmImage();
 
@@ -88,7 +88,7 @@ namespace JeremyAnsel.Xwa.Cbm
             return image;
         }
 
-        public static CbmImage FromMemory(int width, int height, byte[] data)
+        public static CbmImage FromMemory(int width, int height, byte[]? data)
         {
             CbmImage image = new CbmImage();
 
@@ -107,17 +107,17 @@ namespace JeremyAnsel.Xwa.Cbm
             return this.palette32;
         }
 
-        public byte[] GetRawData()
+        public byte[]? GetRawData()
         {
             return this.rawData;
         }
 
-        public byte[] GetImageData()
+        public byte[]? GetImageData()
         {
             return this.GetImageData(false);
         }
 
-        public byte[] GetImageData(bool addBackground)
+        public byte[]? GetImageData(bool addBackground)
         {
             if (this.rawData == null)
             {
@@ -187,12 +187,12 @@ namespace JeremyAnsel.Xwa.Cbm
 
             for (int y = 0; y < this.Height; y++)
             {
-                int indexW = index + 4 + BitConverter.ToInt32(this.rawData, index);
+                int indexW = index + 4 + BitConverter.ToInt32(this.rawData!, index);
                 index += 4;
 
                 while (true)
                 {
-                    byte op = this.rawData[index];
+                    byte op = this.rawData![index];
                     index++;
 
                     if (op == 0x80)
@@ -327,23 +327,23 @@ namespace JeremyAnsel.Xwa.Cbm
 
                     for (; i < tLength; i++)
                     {
-                        if ((n > 0 && t.Array[i] == v) || i == 0)
+                        if ((n > 0 && t.Array![i] == v) || i == 0)
                         {
                             break;
                         }
 
-                        v = t.Array[i];
+                        v = t.Array![i];
 
                         n++;
                     }
 
-                    if (n > 0 && i < tLength && t.Array[i] == v)
+                    if (n > 0 && i < tLength && t.Array![i] == v)
                     {
                         i--;
                         n--;
                     }
 
-                    addSegment(values, t.Array, 0, c, n, 127);
+                    addSegment(values, t.Array!, 0, c, n, 127);
 
                     c = i;
                     n = 0;
@@ -358,15 +358,15 @@ namespace JeremyAnsel.Xwa.Cbm
                         n++;
                     }
 
-                    addSegment(values, t.Array, 1, c, n, 63);
+                    addSegment(values, t.Array!, 1, c, n, 63);
 
                     c = i;
                     n = 0;
-                    v = i < tLength ? t.Array[i] : (byte)0;
+                    v = i < tLength ? t.Array![i] : (byte)0;
 
                     for (; i < tLength; i++)
                     {
-                        if (t.Array[i] != v || i == 0)
+                        if (t.Array![i] != v || i == 0)
                         {
                             break;
                         }
@@ -376,7 +376,7 @@ namespace JeremyAnsel.Xwa.Cbm
 
                     if (i >= tLength || n > 0)
                     {
-                        addSegment(values, t.Array, 2, c, n, 63);
+                        addSegment(values, t.Array!, 2, c, n, 63);
                     }
                 }
 
@@ -400,7 +400,7 @@ namespace JeremyAnsel.Xwa.Cbm
 
                         for (int i = block.Item2.Offset; i < block.Item2.Offset + block.Item2.Count; i++)
                         {
-                            data.Add(block.Item2.Array[i]);
+                            data.Add(block.Item2.Array![i]);
                         }
                     }
                     else if (block.Item1 == 1)
@@ -410,7 +410,7 @@ namespace JeremyAnsel.Xwa.Cbm
                     else
                     {
                         data.Add((byte)block.Item2.Count);
-                        data.Add((byte)block.Item2.Array[block.Item2.Offset]);
+                        data.Add((byte)block.Item2.Array![block.Item2.Offset]);
                     }
                 }
 
@@ -429,7 +429,7 @@ namespace JeremyAnsel.Xwa.Cbm
             this.rawData = linesData;
         }
 
-        public void SetPalette(uint[] palette)
+        public void SetPalette(uint[]? palette)
         {
             if (palette == null)
             {
@@ -464,7 +464,7 @@ namespace JeremyAnsel.Xwa.Cbm
             }
         }
 
-        public void SetRawData(int width, int height, byte[] data)
+        public void SetRawData(int width, int height, byte[]? data)
         {
             if (width < 0)
             {
@@ -544,12 +544,12 @@ namespace JeremyAnsel.Xwa.Cbm
             }
         }
 
-        public void Save(Stream stream, ImageFormat format)
+        public void Save(Stream? stream, ImageFormat format)
         {
             this.Save(stream, format, false);
         }
 
-        public void Save(Stream stream, ImageFormat format, bool addBackground)
+        public void Save(Stream? stream, ImageFormat format, bool addBackground)
         {
             if (stream == null)
             {
@@ -629,7 +629,7 @@ namespace JeremyAnsel.Xwa.Cbm
             }
         }
 
-        public void ReplaceWithStream(Stream stream)
+        public void ReplaceWithStream(Stream? stream)
         {
             if (stream == null)
             {
@@ -667,7 +667,7 @@ namespace JeremyAnsel.Xwa.Cbm
             this.InitData(w, h, bytes);
         }
 
-        public void ReplaceWithMemory(int width, int height, byte[] data)
+        public void ReplaceWithMemory(int width, int height, byte[]? data)
         {
             if (width < 0)
             {
